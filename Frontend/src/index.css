@@ -1,0 +1,56 @@
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loginpg{
+  border: solid rgb(229, 227, 227);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  padding:20px;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.suPg{
+  margin: 10px;
+  border: solid rgb(229, 227, 227);
+  width: 320px;
+  text-align: center;
+}
+input[type="text"],
+input[type="password"]{
+  border: solid rgba(233, 226, 226, 0.749);
+  background-color: rgb(247, 249, 250);
+  border-radius: 6px;
+  margin:3px;
+  width:200px;
+  height: 25px;
+  font-size: 12px;
+}
+button{
+  width:220px;
+  background-color: rgba(0, 149, 246,1);
+  border: none;
+  border-radius: 6px ;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+.lgOpt{
+  cursor: pointer;
+}
+.FgPass{
+  cursor: pointer;
+}
+.signUp{
+  cursor: pointer;
+}
