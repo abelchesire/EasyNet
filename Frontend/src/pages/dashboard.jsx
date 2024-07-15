@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { BsEthernet } from "react-icons/bs";
-import { BarChart } from 'recharts';
+import { FaEthernet } from "react-icons/fa6";
+import { HiUsers } from "react-icons/hi2";
+import { MdDevices } from "react-icons/md";
 
 function Dashboard() {
   return (
@@ -9,17 +10,24 @@ function Dashboard() {
       <div className='dashboard'>
       <div className='card'>
          <div className='card-1'>
-            <span className='card-txt'>Active Ports<BsEthernet className='card-icons'/><h3>200</h3></span> 
+            <div className='card-txt'>Active Ports<FaEthernet  className='card-icons'/>
+           </div>
+           <div className='card-counts'>200</div>
+            
          </div>
          <div className='card-2'>
-            <span className='card-txt'>Inactive Ports<BsEthernet className='card-icons'/><h3>200</h3></span> 
-         </div>
-         <div className='card-3'>
-            <span className='card-txt'>No of Users<BsEthernet className='card-icons'/><h3>200</h3></span> 
+            <div className='card-txt'>Inactive Ports<FaEthernet  className='card-icons'/></div> 
+            <div className='card-counts'>200</div>
          </div>
          <div className='card-4'>
-            <span className='card-txt'>Alerts<BsEthernet className='card-icons'/><h3>200</h3></span> 
+            <div className='card-txt'> Devices Connected<MdDevices className='card-icons'/></div>
+            <div className='card-counts'>200</div> 
          </div>
+         <div className='card-3'>
+            <div className='card-txt'>Total Users<HiUsers  className='card-icons'/></div> 
+            <div className='card-counts'>200</div>
+         </div>
+        
        </div> 
        </div>
     </Layout>

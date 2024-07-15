@@ -8,7 +8,7 @@
   flex-direction: row;
   height:100vh;
   width:100vw;
-  overflow: hidden;
+  overflow-y: hidden;
   
 }
 .main-layout {
@@ -20,7 +20,7 @@
 .main-content {
   flex: 1;
   margin-left:0;
-  padding: 20px;
+  padding: 20px; 
   background-color: #ececec;
 }
 .sidebar{
@@ -129,24 +129,32 @@
   border-radius: 5px;
 }
 .card-txt{
-  font-size:small;
+  font-size:20px;
   color:gray-500;
   font-weight:light;
-  padding: 10px;
-  margin:10px;
+  margin:5px;
   
 }
 .card-icons{
   font-size: 20px;
   vertical-align: middle;
   line-height: 1px;
+  margin:5px;
+  float:right; 
+
+.card-counts{
+  
+}
 }
 .networkManagement{
   display:flex;
   flex-direction: column;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  background-color: white;
 }
 .networkManagement-header{
-  margin-bottom: 20px;
+  margin: 20px;
   font-size: 20px;
   font-weight: bold;
   
@@ -185,7 +193,7 @@ modal{
   outline: none;
 }
 
-.input-modal{
+.input-modal,.delete-modal{
   position: absolute;
   width: 500px;
   top: 50%;
@@ -240,6 +248,12 @@ select{
   padding: 3px;
   margin: 3px;
 }
+.error-message{
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-weight: bold;
+}
 .btn-container{
   display:flex;
   justify-content: center;
@@ -269,6 +283,7 @@ td{
   border-bottom: 1px solid #ddd;
 
 }
+
 .message-box{
   position: fixed;
   top: 50%;
@@ -285,17 +300,14 @@ td{
 .action{
   cursor: pointer;
 }
-.btn-UpDel{
-  margin: 5px;
-  background-color:transparent;
-  border-style: none;
-  border-radius: 3px;
-  font-size: 15px;
-  vertical-align: middle;
-  horizontal-align: middle;
-  line-height: 1px;
+.btn-upDel{
+  background-color: transparent;
+  border: none;
+  padding: 3px;
+  font-size: 18px;
   cursor: pointer;
-
+  horizontal-align: middle;
+  vertical-align: middle;
 }
 .cud-ops{
   margin-top: 10px;
@@ -307,8 +319,42 @@ td{
   cursor: pointer;
   margin: 10px;
 }
+.btn-modal-cancel{
+  background-color: red;
+  margin:4px;
+  padding: 3px;
+  border:none;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  
+ }
+
 
 .reports{
-  display:inline-block;
+  display:flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+}
+.main-content-reports{
+  display:flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin:20px;
+}
+.reports-download{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+
+}
+.report-download-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

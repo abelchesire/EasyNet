@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { MdOutlineEdit , MdDelete} from "react-icons/md";
+import { MdDelete } from "react-icons/md";
+import { MdModeEdit } from "react-icons/md";
 
-
-function FieldList() {
+function FieldList({onUpdate, onDelete ,refreshTrigger}) {
   const [fields, setFields] = useState([]);
 
   useEffect(() => {
@@ -17,17 +17,11 @@ function FieldList() {
     };
 
     fetchFields();
-  }, []);
+  }, [refreshTrigger]);
+
 
   
-
-   const handleUpdate = (fieldId) => {
-    console.log(`Updating field with ID:${fieldId}`);
-  };
-
-   const handleDelete =(fieldId) => {
-    console.log(`Deleting field with ID:${fieldId}`);
-  };
+ 
 
   return (
     <>
@@ -39,13 +33,8 @@ function FieldList() {
           <td>{field.user}</td>
           <td>{field.officeNo}</td>
           <td>{field.department}</td>
-          <td className='action'>
-            <button className='btn-UpDel' onClick={() => handleUpdate(field._id)}>
-            <MdOutlineEdit />
-            </button>
-            <button className='btn-UpDel'  onClick={() => handleDelete(field._id)}>
-            <MdDelete /></button>
-            </td>
+          <td className='action'><button className='btn-upDel' onClick={() => onUpdate(field)}><MdModeEdit /></button>
+                                 <button className='btn-upDel' onClick={() => onDelete(field)}><MdDelete /></button></td>
         </tr>
       ))}
     </>
