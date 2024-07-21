@@ -5,6 +5,7 @@ const fieldSchema = new mongoose.Schema(
             type:String,
             required:true,
             unique:true
+          
         },
         typeOfDevice:{
             type:String,
@@ -12,12 +13,12 @@ const fieldSchema = new mongoose.Schema(
         },
         status:{
             type:String,
-            enum:["active","inactive"],
+            enum:["Active","Inactive"],
             required:true
         },
         user:{
             type:String,
-            required:true
+            required:true, 
         },
         officeNo:{
             type:Number,
@@ -25,6 +26,7 @@ const fieldSchema = new mongoose.Schema(
         },
         department:{
             type:String,
+            enum:["ICT","HR","TAS","MRPD","REG","Director","Finance","Security"],
             required:true
         }
     },

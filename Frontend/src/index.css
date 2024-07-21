@@ -45,6 +45,7 @@
   flex:1;
 }
 .top-links{
+  margin-top:20px;
   list-style: none;
 }
 .link-items{
@@ -77,13 +78,13 @@
 }
 
 .header{
+  position:sticky;
+  top:0;
+  z-index:1000;
   height:50px;
   width:100%;
   background-color: #181818;
-  border: 1px solid #black;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-  color:white;
 }
 .card {
   display: flex;
@@ -94,7 +95,8 @@
   
 }
 .card-1{
-  background-color: #2962ff;
+ 
+  background-color:#2e7d32 ;
   height:100px;
   width:200px;
   border: 1px solid #ccc;
@@ -102,7 +104,11 @@
   border-radius: 5px;
 }
 .card-2{
-  background-color:#ff6d00 ;
+ 
+ 
+
+  background-color:#d50000 ;
+  
   height:100px;
   width:200px;
   border: 1px solid #ccc;
@@ -111,7 +117,7 @@
   border-radius: 5px;
 }
 .card-3{
-  background-color:#2e7d32 ;
+  background-color:#ff6d00 ;
   height:100px;
   width:200px;
   border: 1px solid #ccc;
@@ -120,7 +126,7 @@
   border-radius: 5px;
 }
 .card-4{
-  background-color:#d50000 ;
+  background-color: #2962ff;
   height:100px;
   width:200px;
   border: 1px solid #ccc;
@@ -333,19 +339,22 @@ td{
 
 
 .reports{
+  background-color: white;
   display:flex;
   flex-direction: column;
   margin: 0px;
   padding: 0px;
 }
 .main-content-reports{
+ 
+  border: 1px solid gray;
   display:flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin:20px;
 }
-.reports-download{
+.report{
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -354,7 +363,19 @@ td{
 
 }
 .report-download-button{
-  background-color: transparent;
-  border: none;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 60px;
+  margin: 10px;
+  background-color: #1E90FF;
+  border-style: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
   cursor: pointer;
 }

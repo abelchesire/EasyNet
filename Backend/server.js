@@ -8,11 +8,18 @@ const app = express();
  
 connectToDb();
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+    origin: 'http://localhost:5173', 
+    optionsSuccessStatus: 200, 
+  };
+  
+  app.use(cors(corsOptions));
+  
 
 //routing
 app.get('/',(req, res) => { 
-    res.json({hello:"nyangweso"});
+    res.json({hello:"ABEL"});
 });
 //middleware
 

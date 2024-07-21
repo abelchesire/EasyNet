@@ -25,7 +25,6 @@ function Sidebar() {
       <div className='bottom'></div>
       <div className='bottom-links'>
             <Link to='/settings'className='bottom-items'><IoSettingsOutline  className='link-icons'/>Settings</Link>
-            <Link to='/logout'className='bottom-items'><IoMdLogOut  className='link-icons'/>Logout</Link>
       </div>
     </div>
   )
