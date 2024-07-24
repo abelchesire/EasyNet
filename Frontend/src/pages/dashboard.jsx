@@ -6,6 +6,7 @@ import { MdDevices } from "react-icons/md";
 import axios from 'axios';
 import { AreaChart,XAxis,YAxis,CartesianGrid,Tooltip,Area } from 'recharts';
 
+const FIELDLIST_URL = 'http://localhost:3000/api/fields';
 
 function Dashboard() {
    const [counts, setCounts] = useState({
