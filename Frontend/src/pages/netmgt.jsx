@@ -7,6 +7,7 @@ import { IoMdAddCircle } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
 
 Modal.setAppElement('#root');
+const BACKEND_URL ='https://easynet-backend.onrender.com'
 
 function NetworkManagement() {
   const [fields, setFields] = useState([]);
@@ -48,7 +49,7 @@ function NetworkManagement() {
   
   const handleCreate = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/api/fields', formData);
+      const response = await axios.post(`${BACKEND_URL}/api/fields`, formData);
       setFields([...fields, response.data]);
       setFormData({
         portNumber: '',
@@ -163,7 +164,7 @@ function NetworkManagement() {
     }
 
     try {
-      const response = await axios.patch(`http://localhost:3000/api/fields/${selectedField._id}`, formData);
+      const response = await axios.patch(`${BACKEND_URL}/api/fields/${selectedField._id}`, formData);
       setFields(fields.map((field) => (field._id === selectedField._id? response.data : field)));
       setIsOpen(false);
       setSelectedField(null);
@@ -211,7 +212,7 @@ function NetworkManagement() {
     console.log('Confirming delete for field:', fieldToDelete);
     if (fieldToDelete && fieldToDelete._id) {
       try {
-        await axios.delete(`http://localhost:3000/api/fields/${fieldToDelete._id}`);
+        await axios.delete(`${BACKEND_URL}/api/fields/${fieldToDelete._id}`);
         setFields(fields.filter(field => field._id !== fieldToDelete._id));
         setDeleteModalIsOpen(false);
         setShowMessage(true);
