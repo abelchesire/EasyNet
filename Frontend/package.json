@@ -20,7 +20,8 @@
     "react-icons": "^5.2.1",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.24.1",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "recharts": "^2.12.7"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

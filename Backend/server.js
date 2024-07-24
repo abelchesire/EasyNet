@@ -10,8 +10,9 @@ connectToDb();
 app.use(express.json());
 
 const corsOptions = {
-    origin: 'http://localhost:5173', 
+    origin: ['http://localhost:5173' ],
     optionsSuccessStatus: 200, 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
   };
   
   app.use(cors(corsOptions));

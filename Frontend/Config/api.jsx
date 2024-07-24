@@ -44,8 +44,3 @@ function FieldList({onUpdate, onDelete ,refreshTrigger}) {
 
 
 export default FieldList;
-
-
-
-
-

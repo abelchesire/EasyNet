@@ -8,7 +8,7 @@
   flex-direction: row;
   height:100vh;
   width:100vw;
-  overflow-y: hidden;
+  overflow-x:hidden;
   
 }
 .main-layout {
@@ -24,6 +24,7 @@
   background-color: #ececec;
 }
 .sidebar{
+  position:sticky;
   display:flex;
   flex-direction: column;
   background-color: #181818;
@@ -206,11 +207,11 @@ modal{
   left: 50%;
   right: auto;
   bottom: auto;
-  marginRight: -50%;
+  margin-right: -50%;
   transform: translate(-50%, -50%);
   background: white;
   border: 1px solid black;
-  boxShadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .btn-cancel{
   float: right;
