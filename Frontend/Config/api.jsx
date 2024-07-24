@@ -11,7 +11,7 @@ function FieldList({onUpdate, onDelete ,refreshTrigger}) {
   useEffect(() => {
     const fetchFields = async () => {
       try {
-        const response = await axios.get('${BACKEND_URL}/api/fields');
+        const response = await axios.get(`${BACKEND_URL}/api/fields`);
         setFields(response.data);
       } catch (error) {
         console.error('Error fetching fields:', error);
