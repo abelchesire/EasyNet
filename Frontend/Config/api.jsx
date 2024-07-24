@@ -3,13 +3,15 @@ import axios from 'axios';
 import { MdDelete } from "react-icons/md";
 import { MdModeEdit } from "react-icons/md";
 
+const BACKEND_URL ='https://easynet-backend.onrender.com'
+
 function FieldList({onUpdate, onDelete ,refreshTrigger}) {
   const [fields, setFields] = useState([]);
 
   useEffect(() => {
     const fetchFields = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/fields');
+        const response = await axios.get('${BACKEND_URL}/api/fields');
         setFields(response.data);
       } catch (error) {
         console.error('Error fetching fields:', error);
