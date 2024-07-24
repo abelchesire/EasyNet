@@ -10,9 +10,10 @@ connectToDb();
 app.use(express.json());
 
 const corsOptions = {
-    origin: ['http://localhost:5173' ],
+    origin: 'https://easy-net-frontend.vercel.app',
     optionsSuccessStatus: 200, 
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
+    methods: ['GET', 'POST', 'Patch', 'DELETE'],
+    allowedHeaders: 'Content-Type,Authorization'
   };
   
   app.use(cors(corsOptions));
